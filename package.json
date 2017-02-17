@@ -1,0 +1,23 @@
+{
+  "name": "sampleSpringLeaf",
+  "version": "1.0.0",
+  "description": "sample spring boot thymeleaf",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mycor-xyxon/sampleSpringLeaf.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mycor-xyxon/sampleSpringLeaf/issues"
+  },
+  "homepage": "https://github.com/mycor-xyxon/sampleSpringLeaf#readme"
+}
