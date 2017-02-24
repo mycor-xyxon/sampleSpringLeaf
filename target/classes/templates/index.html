@@ -1,10 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<!-- <html lang="ja" xmlns:th="http://www.thymeleaf.org"> -->
 <head>
 	<title></title>
 </head>
 <body>
-<h1>index</h1>
+<!--
+th:includeと書き、値には「読み込むファイルの.htmlを抜いたパス :: th:fragmentに指定した値」というフォーマットで記述をします。
+-->
+<div th:include="common/header::header"></div>
 
+<h1 th:text="${index}"></h1>
+<!-- <p th:text="#{index.welcome}">Welcome to our grocery store!</p> -->
 </body>
 </html>
