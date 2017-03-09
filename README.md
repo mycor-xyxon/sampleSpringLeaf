@@ -1,18 +1,20 @@
 # sampleSpringLeaf
-Thymeleaf environment for frontend
+フロント用のspring boot tymeleaf 検証環境
 
 ## start server
+gulp task で行う予定
+
 ```sh
 mvn spring-boot:run
 or
 java -jar target/sampleSpringLeaf.jar --server.port=8090
 ```
+
 ## url
 [http://localhost:8090/](http://localhost:8090/)
 
 ## gulp
 [実装中]
-
 
 ```sh
 gulp watch
@@ -38,9 +40,9 @@ gulp watch
 ```
 
 ### static files
-#### src
+#### _src
 ```sh
-├── static
+├── _src
 │   ├── js
 │   └── scss
 ```
