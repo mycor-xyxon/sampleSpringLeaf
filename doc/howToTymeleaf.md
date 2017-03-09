@@ -1,6 +1,19 @@
 # how to tymeleaf
 
-http://qiita.com/NagaokaKenichi/items/c6d1b76090ef5ef39482
+tymeleaf のメモ書き(document用)
+
+
+## i18n(properties) の読み込み
+
+- messages_ja.properties
+```sh
+index.welcome = ようこそ！
+```
+
+- index.html
+```sh
+<h1 th:text="#{index.welcome}"></h1>
+```
 
 ## css, js, img の参照
 - css
@@ -21,3 +34,5 @@ http://qiita.com/NagaokaKenichi/items/c6d1b76090ef5ef39482
 
 > ※ spring-boot では静的ファイルの格納先がクラスパス上の「/static」「/public」「/resources」「/META-INF/resources」
 に格納する事が出来る。
+
+※ [http://qiita.com/NagaokaKenichi/items/c6d1b76090ef5ef39482](http://qiita.com/NagaokaKenichi/items/c6d1b76090ef5ef39482)

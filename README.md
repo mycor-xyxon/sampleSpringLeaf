@@ -4,24 +4,27 @@ Thymeleaf environment for frontend
 ## start server
 ```sh
 mvn spring-boot:run
-
+or
 java -jar target/sampleSpringLeaf.jar --server.port=8090
 ```
-
-```sh
-mvn package
-```
-
-
 ## url
 [http://localhost:8090/](http://localhost:8090/)
+
+## gulp
+[実装中]
+
+
+```sh
+gulp watch
+```
 
 ## dir
 ### i18n properties file
 ```sh
 ├── src
 │   ├── main
-│   │   ├── i18n
+│   │   └── resources
+│   │       ├── i18n
 ```
 
 ### templates file
@@ -54,4 +57,4 @@ mvn package
 ```
 
 ## doc
-- [構築手順](./doc/create.md)
+- [tymeleaf memo](./doc/howToTymeleaf.md)
