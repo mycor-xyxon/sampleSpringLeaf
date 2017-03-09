@@ -56,6 +56,7 @@
   "app": {
     "dir": {
       "root": "./src/main/resources/",
+      "i18n": "./src/main/resources/i18n/",
       "scriptDir": "./_src/js/",
       "styleDir": "./_src/scss/",
       "tymeleafDir": "./src/main/resources/templates/",

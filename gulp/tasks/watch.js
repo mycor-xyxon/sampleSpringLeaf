@@ -8,11 +8,15 @@ const runSequence = require('run-sequence');
 const config = require('../../package.json').app;
 
 gulp.task('watch', (next) => {
-  runSequence(['watch:tymeleaf', 'watch:scss'], next);
+  runSequence('build', ['watch:tymeleaf', 'watch:prop', 'watch:scss'], next);
 });
 
 gulp.task('watch:tymeleaf', () => {
   gulp.watch(path.join(config.dir.tymeleafDir, '/**/*.html'), ['build:tymeleaf']);
+});
+
+gulp.task('watch:prop', () => {
+  gulp.watch(path.join(config.dir.i18n, '/*.properties'), ['prop']);
 });
 
 gulp.task('watch:scss', () => {

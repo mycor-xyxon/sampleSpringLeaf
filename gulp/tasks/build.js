@@ -5,16 +5,15 @@
 const path = require('path');
 const gulp = require('gulp');
 const newer = require('gulp-newer');
+const runSequence = require('run-sequence');
 const config = require('../../package.json').app;
+
+gulp.task('build', () => {
+  runSequence('build:tymeleaf', 'prop', 'scss');
+});
 
 gulp.task('build:tymeleaf', () => {
   return gulp.src(path.join(config.dir.tymeleafDir, '/**/*.html'))
     .pipe(newer('./target/classes/templates/'))
     .pipe(gulp.dest('./target/classes/templates/'));
 });
-
-// gulp.task('build:css', () => {
-//   return gulp.src(path.join(config.dir.stylePublishDir, '/**/*.css'))
-//     .pipe(newer('./target/static/css/'))
-//     .pipe(gulp.dest('./target/static/css/'));
-// });

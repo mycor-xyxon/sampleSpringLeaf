@@ -22,3 +22,12 @@ html,body {
   padding:0;
   height:100%;
 }
+
+ul, li, ol {
+  list-style: none;
+}
+
+a, a:visited, a:active {
+  color: #333333;
+  text-decoration: none;
+}

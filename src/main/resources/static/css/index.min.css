@@ -19,6 +19,13 @@ html, body {
   padding: 0;
   height: 100%; }
 
+ul, li, ol {
+  list-style: none; }
+
+a, a:visited, a:active {
+  color: #333333;
+  text-decoration: none; }
+
 .page-layout__header {
   display: block;
   position: fixed;
@@ -44,9 +51,29 @@ html, body {
     top: 50%;
     left: 18.3rem;
     margin: 0;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: normal;
     line-height: 1;
     color: #ac1c20;
     -webkit-transform: translateY(-50%);
             transform: translateY(-50%); }
+
+.menu {
+  position: fixed;
+  top: 47px;
+  left: 0;
+  width: 198px;
+  margin: 0;
+  padding: 0;
+  background-color: #E3E3E3; }
+  .menu li {
+    height: 50px;
+    padding: 5% 0;
+    border-right: 3px solid #B6342F;
+    border-bottom: 1px solid #999999; }
+    .menu li:hover {
+      background-color: #CCC; }
+    .menu li a {
+      display: block;
+      font-size: 16px;
+      text-align: center; }

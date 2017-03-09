@@ -1,5 +1,6 @@
 {
   "index.welcome": "ようこそ！",
+  "index.header": "Sample header",
   "content.title": "タイトル",
   "content.message": "メッセージ",
   "pleaseselect": "選択してください",
