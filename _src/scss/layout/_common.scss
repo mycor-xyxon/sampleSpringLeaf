@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Hiragino Kaku Gothic Pro', 'メイリオ', sans-serif;
+  font-size: 12px;
+}
+
+body {
+  color: #333333;
+  background-color: #EEEEEE;
+}
+
+var, i, b, strong, em, small {
+  font-style: normal;
+  font-weight: normal;
+}
+
+html,body {
+  margin:0;
+  padding:0;
+  height:100%;
+}

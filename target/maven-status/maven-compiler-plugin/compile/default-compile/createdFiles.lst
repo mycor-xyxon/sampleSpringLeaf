@@ -1,3 +1,4 @@
 edu/self/WebApplication.class
 edu/self/indexController.class
 edu/self/helloController.class
+edu/self/ServletInitializer.class

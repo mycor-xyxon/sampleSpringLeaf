@@ -1,5 +1,7 @@
 {
   "indx.welcome": "welcome!",
+  "content.title": "This is title",
+  "content.message": "This is message",
   "pleaseselect": "Please select",
   "all_admins": "- all (administrators) -",
   "all": "- all -",

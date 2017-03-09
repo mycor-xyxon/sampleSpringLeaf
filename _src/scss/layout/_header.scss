@@ -1,0 +1,32 @@
+.page-layout__header {
+  display: block;
+  position: fixed;  
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 46px;
+}
+.header {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-bottom: 1px solid #b6342f;
+  background: linear-gradient(to bottom, #fff, #d9d9d9);
+  .header__logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .header__heading {
+    position: absolute;
+    top: 50%;
+    left: 18.3rem;
+    margin: 0;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1;
+    color: #ac1c20;
+    transform: translateY(-50%);
+  }
+}

@@ -1,5 +1,7 @@
 {
   "index.welcome": "ようこそ！",
+  "content.title": "タイトル",
+  "content.message": "メッセージ",
   "pleaseselect": "選択してください",
   "all_admins": "- すべて(管理者) -",
   "all": "- すべて -",

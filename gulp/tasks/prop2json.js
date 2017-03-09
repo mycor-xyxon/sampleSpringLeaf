@@ -7,11 +7,11 @@ const props2json = require('gulp-props2json');
 
 gulp.task('prop', () => {
   return gulp.src([
-    './src/main/resources/templates/i18n/*.properties',
+    './src/main/i18n/*.properties',
     ])
     .pipe(props2json({
       minify: false,
       complexTypes: true,
     }))
-    .pipe(gulp.dest('./src/main/resources/js/props/'));
+    .pipe(gulp.dest('./src/main/resources/static/js/props/'));
 });

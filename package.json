@@ -52,5 +52,18 @@
     "require-dir": "^0.3.1",
     "run-sequence": "^1.2.2",
     "through2": "^2.0.3"
-  }
+  },
+  "app": {
+    "dir": {
+      "root": "./src/main/resources/",
+      "scriptDir": "./_src/js/",
+      "styleDir": "./_src/scss/",
+      "tymeleafDir": "./src/main/resources/templates/",
+      "scriptPublishDir": "./src/main/resources/static/js/",
+      "stylePublishDir": "./src/main/resources/static/css/"
+    }
+  },
+  "scssIncludeLibrary": [
+    "./node_modules"
+  ]
 }
