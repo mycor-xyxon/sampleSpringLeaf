@@ -1,5 +1,5 @@
 const $ = require('jquery');
-const EventEmitter = require('eventemitter3');
+const EventEmitter = require('eventemitter');
 const $document = $(document);
 
 const emitter = new EventEmitter();
@@ -7,8 +7,8 @@ const emitter = new EventEmitter();
 console.log('emitter', emitter);
 
 function sample() {
-  // let $header = $('#header');
-  // console.log('sample', $header);
+  let $header = $('#header');
+  console.log('sample', $header);
 }
 emitter.on('ready', sample);
 
