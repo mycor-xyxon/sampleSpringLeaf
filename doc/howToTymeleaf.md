@@ -15,6 +15,23 @@ index.welcome = ようこそ！
 <h1 th:text="#{index.welcome}"></h1>
 ```
 
+## include
+
+- header.html
+```html
+<header th:fragment="header">
+	...
+</header>
+```
+
+- index.html
+```html
+<body>
+	<header th:include="common/header::header"></header>
+	...
+</body>
+```
+
 ## css, js, img の参照
 - css
 ```html
@@ -34,5 +51,9 @@ index.welcome = ようこそ！
 
 > ※ spring-boot では静的ファイルの格納先がクラスパス上の「/static」「/public」「/resources」「/META-INF/resources」
 に格納する事が出来る。
+
+## ハマったメモ
+- include ファイル内の上部にコメントがあるとエラー
+- link タグやimg タグをそのまま href, src のみ記述するとエラー
 
 ※ [http://qiita.com/NagaokaKenichi/items/c6d1b76090ef5ef39482](http://qiita.com/NagaokaKenichi/items/c6d1b76090ef5ef39482)

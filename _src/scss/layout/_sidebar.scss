@@ -3,13 +3,14 @@
 	top: 47px;
 	left: 0;
 	width: 198px;
+  height: 100vh;
 	margin: 0;
 	padding: 0;
 	background-color: #E3E3E3;
   li {
     height: 50px;
     padding: 5% 0;
-    border-right: 3px solid #B6342F;
+    border-right: 3px solid #2980b9;
     border-bottom: 1px solid #999999;
     &:hover {
       background-color: #CCC;

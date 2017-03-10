@@ -21,7 +21,7 @@ gulp watch
 ```
 
 ## dir
-### i18n properties file
+### i18n properties files
 ```sh
 ├── src
 │   ├── main
@@ -29,7 +29,7 @@ gulp watch
 │   │       ├── i18n
 ```
 
-### templates file
+### templates files
 ```sh
 ├── src
 │   ├── main

@@ -8,7 +8,7 @@ const runSequence = require('run-sequence');
 const config = require('../../package.json').app;
 
 gulp.task('watch', (next) => {
-  runSequence('build', ['watch:tymeleaf', 'watch:prop', 'watch:scss'], next);
+  runSequence('build', ['watch:tymeleaf', 'watch:prop', 'watch:scss', 'watch:script'], next);
 });
 
 gulp.task('watch:tymeleaf', () => {
@@ -21,4 +21,8 @@ gulp.task('watch:prop', () => {
 
 gulp.task('watch:scss', () => {
   gulp.watch(path.join(config.dir.styleDir, '/**/*.{scss,sass}'), ['scss']);
+});
+
+gulp.task('watch:script', () => {
+  gulp.watch([`${config.dir.scriptDir}/**/*.js`, `!${config.dir.scriptDir}/**/*.min.js`], ['script']);
 });

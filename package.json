@@ -45,6 +45,7 @@
     "gulp-props2json": "^2.0.0",
     "gulp-rename": "^1.2.2",
     "gulp-sass": "^3.1.0",
+    "gulp-shell": "^0.6.3",
     "gulp-sourcemaps": "^2.4.1",
     "gulp-uglify": "^2.0.1",
     "gulp-util": "^3.0.8",
@@ -52,6 +53,41 @@
     "require-dir": "^0.3.1",
     "run-sequence": "^1.2.2",
     "through2": "^2.0.3"
+  },
+  "dependencies": {
+    "es6-promise": "^3.1.2",
+    "eventemitter3": "^1.1.1",
+    "handlebars": "^4.0.5",
+    "html2canvas": "^0.5.0-beta4",
+    "jquery": "^2.1.4",
+    "jquery.transit": "^0.9.12",
+    "moment": "^2.10.6",
+    "revalidator": "^0.3.1"
+  },
+  "browserify": {
+    "transform": [
+      "browserify-shim",
+      [
+        "babelify",
+        {
+          "presets": [
+            "es2015"
+          ],
+          "compact": false
+        }
+      ]
+    ]
+  },
+  "browser": {
+    "jquery:local": "./node_modules/jquery/dist/jquery.js",
+    "eventemitter:local": "./node_modules/eventemitter3/index.js",
+    "handlebars:local": "./node_modules/handlebars/dist/handlebars.min.js"
+  },
+  "browserify-shim": {
+    "jquery": "global:$",
+    "moment": "global:moment",
+    "eventemitter": "global:EventEmitter",
+    "handlebars": "global:Handlebars"
   },
   "app": {
     "dir": {
