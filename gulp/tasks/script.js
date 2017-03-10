@@ -20,28 +20,30 @@ const sourcemaps = require('gulp-sourcemaps');
 const config = require('../../package.json').app;
 const browserifyCache = new Map();
 
+gutil.log(`gulp running in ${argv.production ? 'prodction' : 'develop'} mode`);
+
 gulp.task('script', (next) => {
-  runSequence('lint:script', 'compile:script', 'build:script', next);
+  runSequence('compile:script', 'build:script', next);
 });
 
-gulp.task('lint:script', () => {
-  return gulp.src([`${config.dir.scriptDir}/*.js`, `${config.dir.scriptDir}/**/index.js`, `!${config.dir.scriptDir}/**/*.min.js`])
-    .pipe(plumber({
-      errorHandler: function (error) {
-        let taskName = 'compile:script';
-        let title = `[task]${taskName} ${error.plugin}`;
-        let errorMsg = `error: ${error.message}`;
-        gutil.log(`${title}\n${errorMsg}`);
-        this.emit('end');
-      },
-    }))
-    .pipe(eslint({
-      useEslintrc: true,
-    }))
-    .pipe(eslint.format())
-    .pipe(eslint.failOnError())
-    .pipe(plumber.stop());
-});
+// gulp.task('lint:script', () => {
+//   return gulp.src([`${config.dir.scriptDir}/*.js`, `${config.dir.scriptDir}/**/index.js`, `!${config.dir.scriptDir}/**/*.min.js`])
+//     .pipe(plumber({
+//       errorHandler: function (error) {
+//         let taskName = 'compile:script';
+//         let title = `[task]${taskName} ${error.plugin}`;
+//         let errorMsg = `error: ${error.message}`;
+//         gutil.log(`${title}\n${errorMsg}`);
+//         this.emit('end');
+//       },
+//     }))
+//     .pipe(eslint({
+//       useEslintrc: true,
+//     }))
+//     .pipe(eslint.format())
+//     .pipe(eslint.failOnError())
+//     .pipe(plumber.stop());
+// });
 
 gulp.task('compile:script', () => {
   const execBrowserify = through2.obj((file, enc, next) => {

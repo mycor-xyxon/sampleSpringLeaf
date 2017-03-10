@@ -66,15 +66,7 @@
   },
   "browserify": {
     "transform": [
-      "browserify-shim",
-      [
-        "babelify",
-        {
-          "presets": [
-            "es2015"
-          ],
-          "compact": false
-        }
+      "browserify-shim", ["babelify", {"presets": ["es2015"], "compact": false}
       ]
     ]
   },
